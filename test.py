@@ -23,13 +23,6 @@ for i in range(0,5):                #Change the range according to the data requ
         current.append(name)       
         date=hackathon.find('div',{'class':'Pricereact__DivContainer-t54vn5-0 jsOkdo Price--main'}).text[1:]
         last.append(date)
-
-        # print(h_type)  # Name of the Etherium
-
-        # print(name)   # Price of the Eth
-        
-        # print(date) #Last price
-
 df = pd.DataFrame(list(zip(new,current,last)),
 columns =['Name', 'current','Last'])
 df.to_csv("Etherium.csv")
